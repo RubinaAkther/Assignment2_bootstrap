@@ -1,0 +1,54 @@
+@media (max-width: 992px) {
+  /* navbar */
+  .nav-link::after {
+    left: 1px;
+    bottom: 10px;
+    width: 100%;
+  }
+  .nav-link {
+    display: inline-block;
+  }
+
+  .menu-items {
+    margin-top: 1.5rem;
+  }
+
+  /* carousel */
+
+  .carousel-item img {
+    height: 100%;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  /* shop */
+  .shop-card-img {
+    width: 50%;
+    height: 510px;
+  }
+}
+
+@media (max-width: 769px) {
+  /* collection */
+  .collection-description {
+    text-align: center;
+  }
+
+  .shoes-img {
+    text-align: center;
+  }
+
+  /* footer */
+  .social-links {
+    margin-left: 0px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  /* shop */
+  .shop-card-img {
+    height: 400px;
+  }
+}

@@ -1,0 +1,520 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/*
+ font-family: "Playfair Display", serif;
+  font-family: "Montserrat", sans-serif;
+    font-family: "Lora", serif;
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --light-white: #d2d2d2;
+  --gray: #b0b0b0;
+  --dark-gray: #555555;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*
+==========================================
+custome css
+==========================================
+*/
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+p {
+  font-family: 'Lora', serif;
+}
+
+/*
+==========================================
+NavBar Start
+==========================================
+*/
+
+.navbar {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--black) !important;
+}
+
+.nav-item {
+  padding-left: 1rem;
+}
+
+.nav-link {
+  letter-spacing: 0.1rem;
+  position: relative;
+  text-decoration: none;
+  color: var(--white) !important;
+  font-size: 0.875rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--white);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  bottom: 10px;
+  width: 80%;
+  height: 1px;
+  background-color: var(--white);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  opacity: 0;
+  border: none;
+  transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+  outline: none;
+}
+
+.search-input.active {
+  width: 200px;
+  padding: 5px 10px;
+  opacity: 1;
+  border: none;
+  outline: none;
+  border-radius: 0;
+}
+
+.search-input.active:focus {
+  outline: none !important;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+  opacity: 1;
+  font-size: 0.875rem;
+}
+
+.search-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.shop-btn {
+  border: none;
+  color: white;
+  position: relative;
+}
+
+.shop-btn:hover {
+  color: var(--light-white);
+}
+
+.add-to-cart {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 0.7rem;
+  font-weight: 600;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+}
+
+.search-btn {
+  border: none;
+  color: var(--white);
+}
+
+.search-btn:hover {
+  color: var(--light-white);
+}
+
+.menu i {
+  color: var(--white);
+}
+
+/*
+==========================================
+NavBar End
+==========================================
+*/
+
+/*
+==========================================
+Hero Section Start
+==========================================
+*/
+
+.carousel-item {
+  height: 100vh;
+  background-color: #333;
+}
+.carousel-item img {
+  object-fit: cover;
+  object-position: top;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.carousel-caption {
+  text-align: start;
+  top: 22%;
+  left: 10%;
+}
+
+.hero-greetings,
+.hero-subtitle,
+.btn {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.hero-greetings {
+  font-size: 1.3rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+}
+
+.hero-content {
+  font-family: 'Lora', serif;
+  width: 50%;
+}
+
+.hero-view {
+  border: 1px solid var(--white);
+  color: var(--white);
+  border-radius: 0;
+  padding: 10px 55px;
+  margin-right: 20px;
+  transition: all 0.15s ease-in-out;
+}
+
+.hero-view:hover {
+  border: 1px solid var(--white);
+  border-bottom: 3px solid var(--white);
+}
+
+.hero-purchase {
+  background-color: var(--white);
+
+  border-radius: 0;
+  padding: 10px 55px;
+  transition: all 0.15s ease-in-out;
+}
+
+.hero-purchase:hover {
+  background-color: #f5f5f5;
+  color: var(--black);
+}
+
+.button-holder {
+  margin-top: 30px;
+}
+
+/*
+==========================================
+Hero Section End
+==========================================
+*/
+/*
+==========================================
+service Section start
+==========================================
+*/
+
+.service-section {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.service-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.service-description {
+  font-family: 'Lora', serif;
+  letter-spacing: 0.08rem;
+  color: var(--dark-gray);
+}
+
+.read-more-btn {
+  text-decoration: none;
+  position: relative;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.read-more-btn::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 8px;
+  left: 10px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.read-more-btn:hover::after {
+  width: 80%;
+}
+
+.read-more-btn:hover {
+  color: #555;
+}
+
+/*
+==========================================
+service Section End
+==========================================
+*/
+
+/*
+==========================================
+Collection Section Start
+==========================================
+*/
+#collection {
+  margin-bottom: 10%;
+}
+
+.collection-text {
+  color: var(--dark-gray);
+}
+
+.collection-btn {
+  border: 1px solid var(--black);
+  border-radius: 0;
+  padding: 10px 45px;
+}
+
+.collection-btn:hover {
+  background-color: var(--black);
+  color: white;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.position-relative:hover .overlay {
+  opacity: 1;
+}
+
+.overlay span {
+  font-weight: bold;
+}
+
+.collection-row {
+  height: 51.6%;
+}
+
+.image-content {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+.fashion-content {
+  margin-top: 10%;
+}
+
+/*
+==========================================
+Collection Section End
+==========================================
+*/
+
+/*
+==========================================
+Shop Section Start
+==========================================
+*/
+
+#shop {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.card {
+  position: relative;
+}
+
+.shop-overlay {
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .shop-overlay {
+  opacity: 1;
+}
+
+.btn-dark {
+  font-size: 0.875rem;
+}
+
+.shop-card-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.parallax-section {
+  background-image: url('../images/slider3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.parallax-content {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 2rem;
+}
+
+.zoom-container {
+  overflow: hidden;
+}
+.zoom-container img {
+  transition: transform 0.3s ease;
+}
+.zoom-container:hover img {
+  transform: scale(1.1);
+}
+
+/*
+==========================================
+Shop Section End
+==========================================
+*/
+
+/*
+==========================================
+about Section start
+==========================================
+*/
+
+.about-link {
+  color: black !important;
+}
+
+/*
+==========================================
+about Section End
+==========================================
+*/
+/*
+==========================================
+contact Section start
+==========================================
+*/
+
+#contact {
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.contact-btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
+/*
+==========================================
+contact Section End
+==========================================
+*/
+
+/*
+==========================================
+footer Section End
+==========================================
+*/
+.footer-section {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.social-links {
+  margin-left: 8%;
+}
+/*
+==========================================
+footer Section End
+==========================================
+*/
